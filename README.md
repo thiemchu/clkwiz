@@ -19,3 +19,13 @@ This repository contains scripts for generating Xilinx Vivado clocking wizard IP
 - vivado version: the current scripts support only two versions
   - 20174 &rarr; 2017.4
   - 20183 &rarr; 2018.3
+
+# Output
+The output xci file (```clk_wiz_0.xci```) is located at the following directory:
+```
+ip/clk_wiz_0/
+```
+The scripts also generate some log files in the following directory:
+```
+log/
+```
