@@ -1,4 +1,5 @@
 .cache/
 .Xil/
+fsm_encoding.os
 ip/
 log/
