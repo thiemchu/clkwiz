@@ -16,7 +16,7 @@ This repository contains scripts for generating Xilinx Vivado clocking wizard IP
   - n &rarr; no buffer
 - clkin_freq: input clock frequency (MHz) (must be an integer number)
 - clkout_freq: output clock frequency (MHz) (must be an integer number)
-- vivado version: the current scripts support three versions
+- vivado version: the current scripts support four versions
   - 20174 &rarr; 2017.4
   - 20183 &rarr; 2018.3
   - 20191 &rarr; 2019.1
