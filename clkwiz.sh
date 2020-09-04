@@ -3,13 +3,14 @@
 if [ $# != 5 ]; then
     echo "Usage: ./clkwiz.sh <target_fpga> <clkin_type> <clkin_freq (MHz)> <clkout_freq (MHz)> \\"
     echo "                   <vivado version (e.g., 20174, 20183, etc.)>"
-    echo "    target_fpga: v7 -> vc707 board"
-    echo "                 nv -> nexys video board"
-    echo "                 na -> nexys a7-100t (nexys 4 ddr) board"
-    echo "    clkin_type:  s  -> single ended clock capable pin"
-    echo "                 d  -> differential clock capable pin"
-    echo "                 b  -> global buffer"
-    echo "                 n  -> no buffer"
+    echo "    target_fpga: v7   -> vc707 board"
+    echo "                 nv   -> nexys video board"
+    echo "                 na   -> nexys a7-100t (nexys 4 ddr) board"
+    echo "                 aa35 -> arty a7-35t board"
+    echo "    clkin_type:  s    -> single ended clock capable pin"
+    echo "                 d    -> differential clock capable pin"
+    echo "                 b    -> global buffer"
+    echo "                 n    -> no buffer"
     echo "clkin_freq and clkout_freq must be integer numbers"
     echo "Got $# args"
     exit
@@ -44,6 +45,8 @@ elif [ $target_fpga_code = "nv" ]; then # nexys video board
     target_fpga="xc7a200tsbg484-1"
 elif [ $target_fpga_code = "na" ]; then # nexys a7-100t (nexys 4 ddr) board
     target_fpga="xc7a100tcsg324-1"
+elif [ $target_fpga_code = "aa35" ]; then # arty a7-35t board
+    target_fpga="xc7a35ticsg324-1L"
 else
     echo "Not supported fpga"
     exit
