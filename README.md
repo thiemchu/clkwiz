@@ -5,10 +5,11 @@ This repository contains scripts for generating Xilinx Vivado clocking wizard IP
 ```bash
 ./clkwiz.sh <target_fpga> <clkin_type> <clkin_freq (MHz)> <clkout_freq (MHz)> <vivado version (e.g., 20174, 20183, etc.)>
 ```
-- target_fpga: the current script support only three fpga boards
+- target_fpga: the current scripts support four fpga boards
   - v7 &rarr; vc707 board
   - nv &rarr; nexys video board
-  - na &rarr; nexys a7-100t (nexys 4 ddr) board
+  - na100 &rarr; nexys a7-100t (nexys 4 ddr) board
+  - aa35 &rarr; arty a7-35t board
 - clkin_type: input clock type
   - s &rarr; single ended clock capable pin
   - d &rarr; differential clock capable pin
