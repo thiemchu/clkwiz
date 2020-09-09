@@ -11,7 +11,7 @@ if [ $# != 5 ]; then
     echo "                 d     -> differential clock capable pin"
     echo "                 b     -> global buffer"
     echo "                 n     -> no buffer"
-    echo "clkin_freq and clkout_freq must be integer numbers"
+    echo "clkin_freq and clkout_freq must be numbers with three fractional digits (e.g., 100.000, 83.333)"
     echo "Got $# args"
     exit
 fi
@@ -65,8 +65,8 @@ else
     prim_source="No_buffer"
 fi
 
-prim_in_freq="${clkin_freq}.000"
-clkout1_requested_out_freq="${clkout_freq}.000"
+prim_in_freq=$clkin_freq
+clkout1_requested_out_freq=$clkout_freq
 use_locked="true"
 locked_port="locked"
 use_reset="true"
