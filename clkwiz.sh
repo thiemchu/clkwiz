@@ -7,6 +7,7 @@ if [ $# != 5 ]; then
     echo "                 nv    -> nexys video board"
     echo "                 na100 -> nexys a7-100t (nexys 4 ddr) board"
     echo "                 aa35  -> arty a7-35t board"
+    echo "                 aa100 -> arty a7-100t board"
     echo "    clkin_type:  s     -> single ended clock capable pin"
     echo "                 d     -> differential clock capable pin"
     echo "                 b     -> global buffer"
@@ -47,6 +48,8 @@ elif [ $target_fpga_code = "na100" ]; then # nexys a7-100t (nexys 4 ddr) board
     target_fpga="xc7a100tcsg324-1"
 elif [ $target_fpga_code = "aa35" ]; then # arty a7-35t board
     target_fpga="xc7a35ticsg324-1L"
+elif [ $target_fpga_code = "aa100" ]; then # arty a7-100t board
+    target_fpga="xc7a100tcsg324-1"
 else
     echo "Not supported fpga"
     exit
