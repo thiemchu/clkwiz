@@ -35,6 +35,9 @@ elif [ $vivado_ver -eq 20191 ]; then
 elif [ $vivado_ver -eq 20192 ]; then
     vivado_bin="/tools/Xilinx/Vivado/2019.2/bin/vivado"
     ip_ver="6.0"
+elif [ $vivado_ver -eq 20202 ]; then
+    vivado_bin="/tools/Xilinx/Vivado/2020.2/bin/vivado"
+    ip_ver="6.0"
 else
     echo "Not supported vivado version"
     exit
